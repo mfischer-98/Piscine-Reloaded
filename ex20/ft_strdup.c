@@ -1,40 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/03 11:20:24 by mefische          #+#    #+#             */
-/*   Updated: 2025/04/03 11:20:27 by mefische         ###   ########.fr       */
+/*   Created: 2025/04/03 14:42:19 by mefische          #+#    #+#             */
+/*   Updated: 2025/04/03 15:27:35 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 #include <stdlib.h>
 
-void	ft_put_char(char c)
+char	*ft_strdup(char	*src)
 {
-	write(1, &c, 1);
-}
+	char	*dup;
+	int		i;
+	int		l;
 
-void	ft_is_negative(int n)
-{
-	if (n >= 0)
+	while (src[l])
 	{
-		ft_put_char('P');
+		l++;
 	}
-	else
+	dup = (char *)malloc(l * sizeof(char));
+	if (dup == NULL)
+		return (NULL);
+	while (src[i])
 	{
-		ft_put_char('N');
+		dup[i] = src[i];
+		i++;
 	}
+	dup[i] = '\0';
+	return (dup);
 }
 
 int	main(int argc, char **argv)
 {
-	if (argc == 2)
-	{
-		ft_is_negative(atoi(argv[1]));
-	}
+	if (argc > 1)
+		printf("%s\n", ft_strdup(argv[1]));
 	return (0);
 }

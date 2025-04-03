@@ -1,40 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/03 11:20:24 by mefische          #+#    #+#             */
-/*   Updated: 2025/04/03 11:20:27 by mefische         ###   ########.fr       */
+/*   Created: 2025/04/03 15:00:05 by mefische          #+#    #+#             */
+/*   Updated: 2025/04/03 15:26:21 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 #include <stdlib.h>
 
-void	ft_put_char(char c)
+int	*ft_range(int min, int max)
 {
-	write(1, &c, 1);
+	int	range;
+	int	i;
+	int	*array;
+
+	if (min >= max)
+		return (NULL);
+	i = 0;
+	range = (max - min);
+	array = (int *)malloc(range * sizeof(int));
+	while (i <= range && min < max)
+	{
+		array[i] = min;
+		min ++;
+		i ++;
+	}
+	return (array);
 }
 
-void	ft_is_negative(int n)
+int	main(void)
 {
-	if (n >= 0)
-	{
-		ft_put_char('P');
-	}
-	else
-	{
-		ft_put_char('N');
-	}
-}
-
-int	main(int argc, char **argv)
-{
-	if (argc == 2)
-	{
-		ft_is_negative(atoi(argv[1]));
-	}
-	return (0);
+	ft_range(0, 10);
 }

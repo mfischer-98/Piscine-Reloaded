@@ -3,32 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mefische <mefische@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/02 09:55:17 by mefische          #+#    #+#             */
-/*   Updated: 2025/04/02 10:00:24 by mefische         ###   ########.fr       */
+/*   Created: 2025/04/03 11:20:55 by mefische          #+#    #+#             */
+/*   Updated: 2025/04/03 11:20:58 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void    ft_swap(int *a, int *b)
+void	ft_swap(int *a, int *b)
 {
-    int t;
+	int	t;
 
-    t = *a;
-    *a = *b;
-    *b = t;
+	t = *a;
+	*a = *b;
+	*b = t;
 }
 
-int main(void)
+int	main(void)
 {
-    int x;
-    int y;
+	int	x;
+	int	y;
 
-    x = 10;
-    y = 20;
-    ft_swap(&x, &y);
-    printf("x = %d\ny = %d", x, y);
-    return (0);
+	x = 10;
+	y = 20;
+	ft_swap(&x, &y);
+	printf("x = %d\ny = %d", x, y);
+	return (0);
 }

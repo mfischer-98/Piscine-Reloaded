@@ -3,34 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mefische <mefische@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/02 09:29:11 by mefische          #+#    #+#             */
-/*   Updated: 2025/04/02 09:40:21 by mefische         ###   ########.fr       */
+/*   Created: 2025/04/03 11:19:59 by mefische          #+#    #+#             */
+/*   Updated: 2025/04/03 11:20:03 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void    ft_putchar(char c)
+void	ft_putchar(char c)
 {
-    write(1, &c, 1);
+	write(1, &c, 1);
 }
 
-void    ft_print_alphabet(void)
+void	ft_print_alphabet(void)
 {
-    char    l;
+	char	l;
 
-    l = 'a';
-    while (l <= 'z')
-    {
-        ft_putchar(l);
-        l++;
-    }
+	l = 'a';
+	while (l <= 'z')
+	{
+		ft_putchar(l);
+		l++;
+	}
 }
 
-int main(void)
+int	main(void)
 {
-    ft_print_alphabet();
-    return (0);
+	ft_print_alphabet();
+	return (0);
 }
