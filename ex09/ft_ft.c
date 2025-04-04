@@ -6,17 +6,17 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 11:20:32 by mefische          #+#    #+#             */
-/*   Updated: 2025/04/03 11:20:34 by mefische         ###   ########.fr       */
+/*   Updated: 2025/04/04 11:52:32 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
+/*#include <stdio.h>
+*/
 void	ft_ft(int *nbr)
 {
 	*nbr = 42;
 }
-
+/*
 int	main(void)
 {
 	int	x;
@@ -24,4 +24,4 @@ int	main(void)
 	x = 82;
 	ft_ft(&x);
 	printf("%d", x);
-}
+}*/

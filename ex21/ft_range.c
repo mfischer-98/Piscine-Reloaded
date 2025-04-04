@@ -6,11 +6,11 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 15:00:05 by mefische          #+#    #+#             */
-/*   Updated: 2025/04/04 10:38:07 by mefische         ###   ########.fr       */
+/*   Updated: 2025/04/04 12:08:45 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
+/*
+#include <stdio.h>*/
 #include <stdlib.h>
 
 int	*ft_range(int min, int max)
@@ -34,8 +34,8 @@ int	*ft_range(int min, int max)
 	}
 	return (array);
 }
-
+/*
 int	main(void)
 {
 	ft_range(0, 10);
-}
+}*/

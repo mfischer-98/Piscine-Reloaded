@@ -6,12 +6,12 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 11:20:55 by mefische          #+#    #+#             */
-/*   Updated: 2025/04/03 11:20:58 by mefische         ###   ########.fr       */
+/*   Updated: 2025/04/04 11:52:29 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
+/*#include <stdio.h>
+*/
 void	ft_swap(int *a, int *b)
 {
 	int	t;
@@ -20,7 +20,7 @@ void	ft_swap(int *a, int *b)
 	*a = *b;
 	*b = t;
 }
-
+/*
 int	main(void)
 {
 	int	x;
@@ -31,4 +31,4 @@ int	main(void)
 	ft_swap(&x, &y);
 	printf("x = %d\ny = %d", x, y);
 	return (0);
-}
+}*/

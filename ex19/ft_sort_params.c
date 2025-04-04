@@ -6,16 +6,18 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 11:19:36 by mefische          #+#    #+#             */
-/*   Updated: 2025/04/04 10:33:26 by mefische         ###   ########.fr       */
+/*   Updated: 2025/04/04 12:17:48 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+/*#include <unistd.h>
 
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);	
 }
+*/
+void	ft_putchar(char c);
 
 void	ft_printstr(char *str)
 {
@@ -71,8 +73,8 @@ int	main(int argc, char **argv)
 			j = 0;
 			while (j < argc - 1)
 			{
-				if(argv[j + 1])
-					ft_sortparms(&argv[i], &argv[i + 1]);
+				if (argv[j + 1])
+					ft_sortparms(&argv[j], &argv[j + 1]);
 				j++;
 			}
 			i++;
@@ -85,5 +87,4 @@ int	main(int argc, char **argv)
 			i++;
 		}
 	}
-	return (0);
 }

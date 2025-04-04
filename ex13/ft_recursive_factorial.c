@@ -6,12 +6,12 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 11:21:16 by mefische          #+#    #+#             */
-/*   Updated: 2025/04/03 11:21:19 by mefische         ###   ########.fr       */
+/*   Updated: 2025/04/04 11:54:49 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
+/*#include <stdio.h>
+*/
 int	ft_recursive_factorial(int nb)
 {
 	int	res;
@@ -27,11 +27,11 @@ int	ft_recursive_factorial(int nb)
 	}
 	return (res);
 }
-
+/*
 int	main(void)
 {
 	int	x;
 
 	x = 5;
 	printf("Result: %d\n", ft_recursive_factorial(x));
-}
+}*/

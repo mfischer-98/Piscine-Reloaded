@@ -6,12 +6,12 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 11:21:23 by mefische          #+#    #+#             */
-/*   Updated: 2025/04/03 11:21:26 by mefische         ###   ########.fr       */
+/*   Updated: 2025/04/04 11:54:47 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
+/*#include <stdio.h>
+*/
 int	ft_sqrt(int nb)
 {
 	int	x;
@@ -27,7 +27,7 @@ int	ft_sqrt(int nb)
 	}
 	return (0);
 }
-
+/*
 int	main(void)
 {
 	int	num;
@@ -35,4 +35,4 @@ int	main(void)
 	num = 16;
 	printf("Result: %d", ft_sqrt(num));
 	return (0);
-}
+}*/
