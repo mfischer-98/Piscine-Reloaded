@@ -6,7 +6,7 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 11:19:36 by mefische          #+#    #+#             */
-/*   Updated: 2025/04/03 15:20:02 by mefische         ###   ########.fr       */
+/*   Updated: 2025/04/04 10:33:26 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,13 @@ void	ft_printstr(char *str)
 	}
 }
 
-void	ft_swap(char *s1, char *s2)
+void	ft_swap(char **s1, char **s2)
 {
 	char	*temp;
 
-	*temp = *s1;
+	temp = *s1;
 	*s1 = *s2;
-	*s2 = *temp;
+	*s2 = temp;
 }
 
 int	ft_strcmp(char *s1, char *s2)
@@ -52,26 +52,38 @@ int	ft_strcmp(char *s1, char *s2)
 	return (s1[i] - s2[i]);
 }
 
-void	ft_sortparms(char *s1, char *s2)
+void	ft_sortparms(char **s1, char **s2)
 {
-	if (ft_strcmp(s1, s2) > 0)
+	if (ft_strcmp(*s1, *s2) > 0)
 		ft_swap(s1, s2);
 }
 
 int	main(int argc, char **argv)
 {
 	int	i;
+	int	j;
 
 	i = 1;
 	if (argc > 1)
 	{
+		while (i < argc - 1)
+		{
+			j = 0;
+			while (j < argc - 1)
+			{
+				if(argv[j + 1])
+					ft_sortparms(&argv[i], &argv[i + 1]);
+				j++;
+			}
+			i++;
+		}
+		i = 1;
 		while (i < argc)
 		{
-			if (argv[i + 1])
-				ft_sortparms(argv[i], argv[i + 1]);
 			ft_printstr(argv[i]);
 			ft_putchar('\n');
 			i++;
 		}
 	}
+	return (0);
 }

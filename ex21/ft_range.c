@@ -6,7 +6,7 @@
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 15:00:05 by mefische          #+#    #+#             */
-/*   Updated: 2025/04/03 15:26:21 by mefische         ###   ########.fr       */
+/*   Updated: 2025/04/04 10:38:07 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ int	*ft_range(int min, int max)
 		return (NULL);
 	i = 0;
 	range = (max - min);
-	array = (int *)malloc(range * sizeof(int));
+	array = malloc(range * sizeof(int));
+	if (!array)
+		return (NULL);
 	while (i <= range && min < max)
 	{
 		array[i] = min;
