@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_count_if.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mefische <mefische@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/03 11:20:24 by mefische          #+#    #+#             */
-/*   Updated: 2025/04/06 16:54:16 by mefische         ###   ########.fr       */
+/*   Created: 2025/04/06 16:35:53 by mefische          #+#    #+#             */
+/*   Updated: 2025/04/06 16:53:33 by mefische         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char h);
-
-void	ft_is_negative(int n)
+int	ft_count_if(char **tab, int (*f)(char*))
 {
-	if (n < 0)
+	int	i;
+	int	res;
+
+	i = 0;
+	res = 0;
+	while (tab[i])
 	{
-		ft_putchar('N');
+		if (f(tab[i]) == 1)
+			res++;
+		i++;
 	}
-	else
-	{
-		ft_putchar('P');
-	}
+	return (res);
 }
